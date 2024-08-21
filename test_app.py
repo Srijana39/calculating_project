@@ -1,12 +1,16 @@
 from app import add, subtract
 
-def test_add():
-    assert add(1, 2) == 3
-    assert add(-1, 1) == 0
+def test_add_positive():
+    assert add(1, 2) == 3  # This test will pass
 
-def test_subtract():
-    assert subtract(2, 1) == 1
-    assert subtract(2, 2) == 0
+def test_add_negative():
+    assert add(-1, -2) == -3  # This test will pass
 
-def test_fail():
+def test_subtract_positive():
+    assert subtract(5, 3) == 2  # This test will pass
+
+def test_add_fail():
     assert add(1, 1) == 3  # This test will fail
+
+def test_subtract_fail():
+    assert subtract(10, 5) == 8  # This test will fail
